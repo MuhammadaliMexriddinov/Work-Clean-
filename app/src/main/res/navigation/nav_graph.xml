@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/mainScreen">
+    <fragment
+        tools:layout="@layout/screen_main"
+        android:id="@+id/mainScreen"
+        android:name="uz.gita.waterappgoogleplaygb.presentetion.screens.MainScreen"
+        android:label="MainScreen" >
+        <action
+            android:id="@+id/action_mainScreen_to_informationScreen"
+            app:destination="@id/informationScreen" />
+        <action
+            android:id="@+id/action_mainScreen_to_managerScreen"
+            app:destination="@id/managerScreen" />
+    </fragment>
+    <fragment
+        tools:layout="@layout/screen_info"
+        android:id="@+id/informationScreen"
+        android:name="uz.gita.waterappgoogleplaygb.presentetion.screens.pages.InformationScreen"
+        android:label="InformationScreen" />
+    <fragment
+        tools:layout="@layout/screen_manager"
+        android:id="@+id/managerScreen"
+        android:name="uz.gita.waterappgoogleplaygb.presentetion.screens.pages.ManagerScreen"
+        android:label="ManagerScreen" />
+</navigation>

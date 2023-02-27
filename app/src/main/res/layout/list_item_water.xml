@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="4dp"
+    android:padding="8dp">
+
+    <ImageView
+        android:id="@+id/image_water"
+        android:layout_width="32dp"
+        android:layout_height="32sp"
+        android:layout_centerVertical="true"
+        android:src="@drawable/ic_glass"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:id="@+id/tv_water_tracker_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="16dp"
+        android:layout_toEndOf="@id/image_water"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        tools:ignore="RelativeOverlap"
+        tools:text="11:59" />
+
+    <TextView
+        android:id="@+id/tv_water_bottle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="8dp"
+        android:layout_toStartOf="@id/image_menu"
+        android:textColor="#5C5B5B"
+        android:textSize="16sp"
+        tools:ignore="RelativeOverlap"
+        tools:text="300 ml" />
+
+    <ImageView
+        android:id="@+id/image_menu"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentEnd="true"
+        android:padding="8dp"
+        android:src="@drawable/ic_menu"
+        tools:ignore="ContentDescription" />
+
+</RelativeLayout>

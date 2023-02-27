@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">Water Reminder</string>
+    <string name="default_water_track">200 ml</string>
+    <string name="save">Save</string>
+    <string name="cancel">Cancel</string>
+    <string name="_150_ml">150 ml</string>
+    <string name="switch_cup">Switch cup</string>
+    <string name="_200_ml">200 ml</string>
+    <string name="_250_ml">250 ml</string>
+    <string name="_300_ml">300 ml</string>
+    <string name="_350_ml">350 ml</string>
+    <string name="_400_ml">400 ml</string>
+    <string name="weekly_average">Weekly average</string>
+    <string name="monthly_average">Monthly average</string>
+    <string name="average_completed">Average completed</string>
+    <string name="reminder_settings">Reminder settings</string>
+    <string name="reminder_schedule">Reminder schedule</string>
+    <string name="reminder_sound">Reminder sound</string>
+    <string name="general">General</string>
+    <string name="intake_goal">Intake goal</string>
+    <string name="weight">Weight</string>
+    <string name="male">Gender</string>
+    <string name="other">Other</string>
+    <string name="feedback">Feedback</string>
+    <string name="share">Share</string>
+    <string name="delete_task">Delete Task</string>
+    <string name="delete_really">Are you sure you want to delete it?</string>
+    <string name="delete">Delete</string>
+    <string name="reminder">Reminder</string>
+</resources>

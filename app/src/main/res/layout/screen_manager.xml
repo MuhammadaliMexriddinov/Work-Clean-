@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/container_water_main"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="12dp"
+        app:cardCornerRadius="16dp"
+        app:layout_constraintDimensionRatio="1:0.75"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:elevation="4dp"
+        app:layout_constraintWidth_percent="0.9">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="16dp">
+
+            <com.github.lzyzsd.circleprogress.ArcProgress
+                android:id="@+id/progress_circular_main"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:arc_finished_color="@color/primary"
+                app:arc_progress="20"
+                app:arc_stroke_width="8sp"
+                app:arc_suffix_text_size="0sp"
+                app:arc_text_color="@color/primary"
+                app:arc_text_size="0sp"
+                app:arc_max="100"
+                app:arc_unfinished_color="#D3D3D3"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintDimensionRatio="1:1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.2"
+                app:layout_constraintWidth_percent="0.53" />
+
+            <TextView
+                android:id="@+id/tv_water_drink"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toBottomOf="@id/progress_circular_main"
+                app:layout_constraintEnd_toEndOf="@id/progress_circular_main"
+                app:layout_constraintStart_toStartOf="@id/progress_circular_main"
+                app:layout_constraintTop_toTopOf="@id/progress_circular_main"
+                tools:text="800/2600" />
+
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintBottom_toBottomOf="@id/progress_circular_main"
+                app:layout_constraintDimensionRatio="1:1"
+                app:layout_constraintEnd_toEndOf="@id/progress_circular_main"
+                app:layout_constraintStart_toStartOf="@id/progress_circular_main"
+                app:layout_constraintTop_toBottomOf="@id/progress_circular_main"
+                app:layout_constraintWidth_percent="0.18">
+
+                <ImageView
+                    android:id="@+id/image_add_glass"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/bg_water_elements"
+                    android:padding="16dp"
+                    android:src="@drawable/ic_glass"
+                    tools:ignore="ContentDescription" />
+
+
+                <ImageView
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:layout_gravity="bottom|center"
+                    android:layout_marginStart="2dp"
+                    android:layout_marginBottom="2dp"
+                    android:contentDescription="@string/app_name"
+                    android:layout_marginEnd="2dp"
+                    android:src="@drawable/ic_add" />
+
+            </FrameLayout>
+
+            <LinearLayout
+                android:id="@+id/container_edit_water"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintDimensionRatio="1:1"
+                app:layout_constraintEnd_toEndOf="@id/progress_circular_main"
+                app:layout_constraintStart_toEndOf="@id/progress_circular_main"
+                app:layout_constraintTop_toBottomOf="@id/progress_circular_main"
+                app:layout_constraintWidth_percent="0.15">
+
+                <ImageView
+                    android:id="@+id/image_edit_glass"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/bg_water_elements"
+                    android:padding="12dp"
+                    android:src="@drawable/ic_glass"
+                    tools:ignore="ContentDescription" />
+
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_water_track"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text="200ml"
+                android:textColor="#000"
+                app:layout_constraintBottom_toBottomOf="@id/container_edit_water"
+                app:layout_constraintStart_toEndOf="@id/container_edit_water"
+                app:layout_constraintTop_toTopOf="@id/container_edit_water" />
+
+            <LinearLayout
+                android:id="@+id/container_add_alarm"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintDimensionRatio="1:1"
+                app:layout_constraintEnd_toStartOf="@id/progress_circular_main"
+                app:layout_constraintStart_toStartOf="@id/progress_circular_main"
+                app:layout_constraintTop_toBottomOf="@id/progress_circular_main"
+                app:layout_constraintWidth_percent="0.15">
+
+                <ImageView
+                    android:id="@+id/image_clock"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/bg_water_elements"
+                    android:padding="12dp"
+                    android:src="@drawable/clock"
+                    tools:ignore="ContentDescription" />
+
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_water_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:textColor="#000"
+                app:layout_constraintBottom_toBottomOf="@+id/container_add_alarm"
+                app:layout_constraintEnd_toStartOf="@+id/container_add_alarm"
+                app:layout_constraintTop_toTopOf="@+id/container_add_alarm"
+                tools:text="11:47" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="24dp"
+        app:cardCornerRadius="16dp"
+        android:elevation="4dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/container_water_main"
+        app:layout_constraintWidth_percent="0.9">
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:layout_gravity="center"
+            app:layout_constraintTop_toTopOf="parent"
+            android:id="@+id/anim1"
+            android:layout_width="82dp"
+            android:layout_height="82dp"
+            android:scaleType="centerCrop"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:lottie_autoPlay="true"
+            app:lottie_fileName="main.json"
+            android:padding="4dp"
+            app:lottie_loop="true" />
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/list_water_tracks"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="8dp"
+            android:orientation="vertical"
+            android:paddingBottom="8dp"
+            android:clipToPadding="true"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            tools:listitem="@layout/list_item_water" />
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
